@@ -14,8 +14,6 @@ public class Phone {
     private Long id;
     private String phone;
     private boolean active;
-    private boolean main;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+
+
 }

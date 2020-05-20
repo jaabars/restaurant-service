@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 @Data
 @Entity
+@Table(name = "prices")
 public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,7 +14,7 @@ public class Price {
     private double price;
     private Date startDate;
     private Date endDate;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "dish_id")
     private Dish dish;
 }

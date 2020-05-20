@@ -3,6 +3,7 @@ package kg.megacom.restaurantservice.model.dto;
 
 import lombok.Data;
 
+import java.util.List;
 
 
 @Data
@@ -12,4 +13,5 @@ public class UserDto {
     private boolean active;
 
     private PositionDto position;
+    private List<PhoneDto> phones;
 }

@@ -5,7 +5,6 @@ public class PhoneDto {
     private Long id;
     private String phone;
     private boolean active;
-    private boolean main;
 
-    private UserDto user;
+
 }

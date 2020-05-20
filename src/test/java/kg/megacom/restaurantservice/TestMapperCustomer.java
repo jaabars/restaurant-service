@@ -19,12 +19,15 @@ public class TestMapperCustomer {
         customerDto.setName("Aibek");
         customerDto.setAddress("Bishkek");
         customerDto.setFlatNo(12);
-        customerDto.setHouseNo("12/1B");
+        customerDto.setHouseNo(22);
+        customerDto.setPassword("1234");
         Customer customer= CustomerMapper.INSTANCE.customerDtoToCustomer(customerDto);
         CustomerDto found=CustomerMapper.INSTANCE.customerToCustomerDto(customer);
         assertEquals(found.getName(),customerDto.getName());
         assertEquals(found.getAddress(),customerDto.getAddress());
         assertEquals(found.getFlatNo(),customerDto.getFlatNo());
         assertEquals(found.getHouseNo(),customerDto.getHouseNo());
+        assertEquals(found.getPassword(),customerDto.getPassword());
+
     }
 }

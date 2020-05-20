@@ -7,16 +7,17 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "restaurant_order_id")
-public class RestaurantOrderId {
+@Table(name = "restaurant_orders")
+public class RestaurantOrders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne
-    //@Column(name = "restaurant_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
-    @OneToOne
-    //@Column(name = "order_id")
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "order_id")
     private Order order;
     private boolean isReady;
     private Date startDate;

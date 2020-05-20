@@ -12,10 +12,10 @@ public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;
-    @OneToMany
-    private List<Dish> dish;
+    @OneToOne
+    private Dish dish;
     private int amount;
 }

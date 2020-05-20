@@ -17,12 +17,11 @@ public class TestMapperPhone {
     public void phoneTest(){
         PhoneDto phoneDto=new PhoneDto();
         phoneDto.setActive(true);
-        phoneDto.setMain(false);
         phoneDto.setPhone("+996 556 556 556");
         Phone phone= PhoneMapper.INSTANCE.phoneDtoToPhone(phoneDto);
         PhoneDto found=PhoneMapper.INSTANCE.phoneToPhoneDto(phone);
         assertEquals(found.getPhone(),phoneDto.getPhone());
         assertEquals(found.isActive(),phoneDto.isActive());
-        assertEquals(found.isMain(),phoneDto.isMain());
+
     }
 }

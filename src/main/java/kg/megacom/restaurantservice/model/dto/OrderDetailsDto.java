@@ -1,7 +1,7 @@
 package kg.megacom.restaurantservice.model.dto;
 
 
-import kg.megacom.restaurantservice.model.entity.Order;
+
 import lombok.Data;
 
 
@@ -12,7 +12,7 @@ public class OrderDetailsDto {
 
     private OrderDto order;
 
-    private List<DishDto> dish;
+    private DishDto dish;
 
     private int amount;
 }

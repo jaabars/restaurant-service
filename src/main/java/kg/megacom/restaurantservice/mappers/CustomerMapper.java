@@ -2,6 +2,7 @@ package kg.megacom.restaurantservice.mappers;
 
 import kg.megacom.restaurantservice.model.dto.CustomerDto;
 import kg.megacom.restaurantservice.model.entity.Customer;
+
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

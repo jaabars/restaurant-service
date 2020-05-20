@@ -14,7 +14,5 @@ public class Account {
     private Long id;
     private String login;
     private String password;
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+
 }

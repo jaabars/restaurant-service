@@ -14,7 +14,7 @@ public class Order {
     private Long id;
     private Date createDate;
     private double cost;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 }

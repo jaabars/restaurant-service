@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer,Long> {
-    int countByPhoneAndPassword(String phone,String pass);
+    Customer findByPhoneAndPassword(String phone,String pass);
 }

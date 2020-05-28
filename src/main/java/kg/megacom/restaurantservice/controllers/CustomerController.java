@@ -23,10 +23,7 @@ public class CustomerController {
         return customerService.getCustomerList();
     }
     @GetMapping(path = "/getByPhone")
-    public int getCustomerByPhone(@RequestParam String phone, @RequestParam String password){
-
-       int n =customerService.getCustomerByPhoneAndPass(phone,password);
-        System.out.println(n);
-        return n;
+    public String getCustomerByPhone(@RequestParam String phone, @RequestParam String password){
+         return customerService.getCustomerByPhoneAndPass(phone,password);
     }
 }
